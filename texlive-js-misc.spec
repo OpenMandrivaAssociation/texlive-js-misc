@@ -1,3 +1,9 @@
+# revision 16211
+# category Package
+# catalog-ctan /macros/plain/contrib/js-misc
+# catalog-date 2009-11-28 12:18:01 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-js-misc
 Version:	20091128
 Release:	1
@@ -58,6 +64,7 @@ TeX document; and - cassette.tex for setting cassette labels.
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-2.1.latex
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-3.1-doc.tex
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-3.1.latex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +75,5 @@ TeX document; and - cassette.tex for setting cassette labels.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
