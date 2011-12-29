@@ -17,28 +17,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A bunch of packages, including: - idverb.tex, for 'short
 verbatim'; - xfig.tex, for including xfig/transfig output in a
 TeX document; and - cassette.tex for setting cassette labels.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -65,7 +55,6 @@ TeX document; and - cassette.tex for setting cassette labels.
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-2.1.latex
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-3.1-doc.tex
 %doc %{_texmfdistdir}/doc/plain/js-misc/xfig/text-3.1.latex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -76,5 +65,3 @@ TeX document; and - cassette.tex for setting cassette labels.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
