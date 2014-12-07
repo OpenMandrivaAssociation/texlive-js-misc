@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-js-misc
 Version:	20091128
-Release:	8
+Release:	9
 Summary:	Miscellaneous macros from Joachim Schrod
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/js-misc
