@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-js-misc
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Miscellaneous macros from Joachim Schrod
 Group:		Publishing
