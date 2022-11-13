@@ -1,18 +1,12 @@
-# revision 16211
-# category Package
-# catalog-ctan /macros/plain/contrib/js-misc
-# catalog-date 2009-11-28 12:18:01 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-js-misc
-Version:	20190228
+Version:	16211
 Release:	1
 Summary:	Miscellaneous macros from Joachim Schrod
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/js-misc
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ verbatim'; - xfig.tex, for including xfig/transfig output in a
 TeX document; and - cassette.tex for setting cassette labels.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -58,24 +52,10 @@ TeX document; and - cassette.tex for setting cassette labels.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091128-2
-+ Revision: 752934
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091128-1
-+ Revision: 718758
-- texlive-js-misc
-- texlive-js-misc
-- texlive-js-misc
-- texlive-js-misc
-
