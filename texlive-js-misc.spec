@@ -1,6 +1,6 @@
 Name:		texlive-js-misc
 Version:	16211
-Release:	1
+Release:	2
 Summary:	Miscellaneous macros from Joachim Schrod
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/js-misc
