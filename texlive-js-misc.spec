@@ -3,7 +3,7 @@ Version:	16211
 Release:	2
 Summary:	Miscellaneous macros from Joachim Schrod
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/js-misc
+URL:		https://www.ctan.org/tex-archive/macros/plain/contrib/js-misc
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/js-misc.doc.r%{version}.tar.xz
